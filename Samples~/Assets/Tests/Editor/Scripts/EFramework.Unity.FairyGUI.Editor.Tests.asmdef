@@ -1,0 +1,15 @@
+{
+    "name": "EFramework.Unity.FairyGUI.Editor.Tests",
+    "references": [
+        "EFramework.Unity.FairyGUI",
+        "EFramework.Unity.FairyGUI.Editor",
+        "EFramework.Unity.Utility",
+        "EFramework.Unity.Editor"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ]
+}
