@@ -40,9 +40,9 @@ public class TestUICanvasEditor
         (new UICanvasEditor() as XEditor.Event.Internal.OnEditorLoad).Process();
 
         // Assert
-        Assert.IsNotNull(UICanvasEditor.icon, "icon 应当被加载到。");
+        Assert.That(UICanvasEditor.icon, Is.Not.Null, "icon 应当被加载到。");
         var addedCount = EditorApplication.projectWindowItemOnGUI.GetInvocationList().Length;
-        Assert.AreEqual(originCount + 1, addedCount, "回调函数应当被注册。");
+        Assert.That(addedCount, Is.EqualTo(originCount + 1), "回调函数应当被注册。");
     }
 
     [Test]
@@ -60,7 +60,7 @@ public class TestUICanvasEditor
             PrefabUtility.SaveAsPrefabAsset(canvasObj, prefabPath);
             var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
             var actualIcon = EditorGUIUtility.GetIconForObject(prefab);
-            Assert.AreEqual(UICanvasEditor.icon, actualIcon, "图标设置应当正确。");
+            Assert.That(actualIcon, Is.EqualTo(UICanvasEditor.icon), "图标设置应当正确。");
         }
         finally
         {

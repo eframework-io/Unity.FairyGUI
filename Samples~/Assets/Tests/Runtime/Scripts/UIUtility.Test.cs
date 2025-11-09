@@ -29,17 +29,17 @@ public class TestUIUtility
 
         // 测试正常情况
         var canvasResult = canvas.Index<BoxCollider>("testChild2");
-        Assert.AreSame(boxCollider, canvasResult, "应该返回正确的子对象");
+        Assert.That(canvasResult, Is.EqualTo(boxCollider), "应该返回正确的子对象");
         // 测试组件不存在
         canvasResult = canvas.Index<BoxCollider>("testChild1");
-        Assert.IsNull(canvasResult, "当组件不存在时应该返回null");
+        Assert.That(canvasResult, Is.Null, "当组件不存在时应该返回null");
         // 测试路径不存在
         canvasResult = canvas.Index<BoxCollider>("nonExistentPath");
-        Assert.IsNull(canvasResult, "当路径不存在时应该返回null");
+        Assert.That(canvasResult, Is.Null, "当路径不存在时应该返回null");
         // 测试UICanvas为null
         canvas = null;
         canvasResult = canvas.Index<BoxCollider>("testChild2");
-        Assert.IsNull(canvasResult, "当UICanvas为null时应该返回null");
+        Assert.That(canvasResult, Is.Null, "当UICanvas为null时应该返回null");
 
         // 测试GComponent.Index
         var child1 = new GComponent();
@@ -51,17 +51,17 @@ public class TestUIUtility
 
         // 测试正常情况
         var gCompResult = rootComp.Index<GGraph>("testChild1.testChild2");
-        Assert.IsNotNull(gCompResult, "应该返回正确的子对象");
+        Assert.That(gCompResult, Is.Not.Null, "应该返回正确的子对象");
         // 测试组件不存在
         gCompResult = rootComp.Index<GGraph>("testChild1");
-        Assert.IsNull(gCompResult, "当组件不存在时应该返回null");
+        Assert.That(gCompResult, Is.Null, "当组件不存在时应该返回null");
         // 测试路径不存在
         gCompResult = rootComp.Index<GGraph>("nonExistentPath");
-        Assert.IsNull(gCompResult, "当路径不存在时应该返回null");
+        Assert.That(gCompResult, Is.Null, "当路径不存在时应该返回null");
         // 测试GComponent为null
         rootComp = null;
         gCompResult = rootComp.Index<GGraph>("testChild1.testChild2");
-        Assert.IsNull(gCompResult, "当GComponent为null时应该返回null");
+        Assert.That(gCompResult, Is.Null, "当GComponent为null时应该返回null");
 
         // 清理测试对象
         GameObject.DestroyImmediate(canvasObj);
@@ -84,19 +84,19 @@ public class TestUIUtility
 
         // 测试GObject
         objChild.SetActive(true);
-        Assert.IsTrue(objChild.visible, "应该设置GObject为可见");
+        Assert.That(objChild.visible, Is.True, "应该设置GObject为可见");
         objChild.SetActive(false);
-        Assert.IsFalse(objChild.visible, "应该设置GObject为不可见");
+        Assert.That(objChild.visible, Is.False, "应该设置GObject为不可见");
 
         // 测试GComponent
         rootComp.SetActive(true);
-        Assert.IsTrue(rootComp.visible, "应该设置GComponent为可见");
+        Assert.That(rootComp.visible, Is.True, "应该设置GComponent为可见");
         rootComp.SetActive(false);
-        Assert.IsFalse(rootComp.visible, "应该设置GComponent为不可见");
+        Assert.That(rootComp.visible, Is.False, "应该设置GComponent为不可见");
 
         rootComp.SetActive("compChild1.compChild2", true);
-        Assert.IsTrue(compChild2.visible, "应该设置GComponent为可见");
+        Assert.That(compChild2.visible, Is.True, "应该设置GComponent为可见");
         rootComp.SetActive("compChild1.compChild2", false);
-        Assert.IsFalse(compChild2.visible, "应该设置GComponent为不可见");
+        Assert.That(compChild2.visible, Is.False, "应该设置GComponent为不可见");
     }
 }

@@ -31,15 +31,15 @@ public class TestUICanvas
 
             // 测试正常情况
             result = canvas.Index("Child1.Child2", typeof(GComponent));
-            Assert.IsNotNull(result, "应该返回正确的子对象");
+            Assert.That(result, Is.Not.Null, "应该返回正确的子对象");
 
             // 测试类型为空
             result = canvas.Index("Child1.Child2", null);
-            Assert.IsNotNull(result, "应该返回正确的子对象");
+            Assert.That(result, Is.Not.Null, "应该返回正确的子对象");
 
             // 测试类型错误
             result = canvas.Index("Child1.Child2", typeof(GButton));
-            Assert.IsNull(result, "应该返回空的子对象");
+            Assert.That(result, Is.Null, "应该返回空的子对象");
         }
         else
         {
@@ -53,16 +53,16 @@ public class TestUICanvas
 
             // 测试正常情况
             result = canvas.Index("testChild2", typeof(BoxCollider));
-            Assert.AreEqual(boxCollider, result, "应该返回正确的子对象");
+            Assert.That(result, Is.EqualTo(boxCollider), "应该返回正确的子对象");
         }
 
         // 测试路径不存在
         result = canvas.Index("nonExistentPath", typeof(BoxCollider));
-        Assert.IsNull(result, "当路径不存在时应该返回null");
+        Assert.That(result, Is.Null, "当路径不存在时应该返回null");
 
         // 测试类型不存在
         result = canvas.Index("testChild2", typeof(MeshRenderer));
-        Assert.IsNull(result, "当类型不存在时应该返回null");
+        Assert.That(result, Is.Null, "当类型不存在时应该返回null");
 
         // 清理测试对象
         GameObject.DestroyImmediate(canvas.gameObject);
@@ -104,14 +104,14 @@ public class TestUICanvas
 
             canvasObj.SetActive(true);
 
-            Assert.IsTrue(loaderCalled, "Loader回调应该被调用");
-            Assert.AreEqual(canvas, capturedCanvas, "Loader回调应该接收正确的UICanvas实例");
+            Assert.That(loaderCalled, Is.True, "Loader回调应该被调用");
+            Assert.That(capturedCanvas, Is.EqualTo(canvas), "Loader回调应该接收正确的UICanvas实例");
         }
 
         if (hasDependency)
         {
             canvasObj.SetActive(true);
-            Assert.IsTrue(UIPackage.GetByName("Package2") != null, "Package2应该被加载");
+            Assert.That(UIPackage.GetByName("Package2"), Is.Not.Null, "Package2应该被加载");
         }
 
         // 清理测试对象
