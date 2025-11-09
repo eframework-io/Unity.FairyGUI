@@ -1,11 +1,11 @@
-# Unity.FairyGUI
+# EFramework FairyGUI for Unity
 
 [![NPM](https://img.shields.io/npm/v/io.eframework.unity.fairygui?label=NPM&logo=npm)](https://www.npmjs.com/package/io.eframework.unity.fairygui)
 [![UPM](https://img.shields.io/npm/v/io.eframework.unity.fairygui?label=UPM&logo=unity&registry_uri=https://package.openupm.com)](https://openupm.com/packages/io.eframework.unity.fairygui)
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.FairyGUI)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-Unity.FairyGUI 是一个基于 FairyGUI 的拓展模块，提供了画布组件、资源包管理等核心功能，支持自定义加载器、自动处理包依赖关系以及编辑器扩展等特性。
+基于 FairyGUI 的拓展模块，提供了画布组件、资源包管理等核心功能，支持自定义加载器、自动处理包依赖关系以及编辑器扩展等特性。
 
 ## 功能特性
 
