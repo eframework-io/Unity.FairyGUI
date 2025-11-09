@@ -9,9 +9,9 @@
 
 ## 功能特性
 
-- [UICanvas](Documentation~/UICanvas.md) 拓展了 UIPanel 组件的功能，提供包资源的自动加载和依赖管理功能
-- [UIManifest](Documentation~/UIManifest.md) 实现了 FairyGUI 导出素材的清单管理功能，用于控制 UI 包资源及其依赖关系
-- [UIUtility](Documentation~/UIUtility.md) 是一个 FairyGUI 的工具函数集，提供了一系列简化 UI 组件操作的扩展方法
+- [UICanvas](Documentation~/UICanvas.md) 拓展了 UIPanel 组件的功能，提供包资源的自动加载和依赖管理功能。
+- [UIManifest](Documentation~/UIManifest.md) 实现了 FairyGUI 导出素材的清单管理功能，用于控制 UI 包资源及其依赖关系。
+- [UIUtility](Documentation~/UIUtility.md) 提供了一系列简化 UI 组件操作的扩展方法，是一个 FairyGUI 的工具函数集。
 
 ## 常见问题
 

@@ -5,7 +5,7 @@
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.FairyGUI)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-UIUtility 是一个 FairyGUI 的工具函数集，提供了一系列简化 UI 组件操作的扩展方法。
+提供了一系列简化 UI 组件操作的扩展方法，是一个 FairyGUI 的工具函数集。
 
 ## 功能特性
 

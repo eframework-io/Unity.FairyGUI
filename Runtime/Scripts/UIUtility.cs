@@ -8,7 +8,7 @@ using EFramework.Unity.Utility;
 namespace EFramework.Unity.FairyGUI
 {
     /// <summary>
-    /// UIUtility 是一个 FairyGUI 的工具函数集，提供了一系列简化 UI 组件操作的扩展方法。
+    /// UIUtility 提供了一系列简化 UI 组件操作的扩展方法，是一个 FairyGUI 的工具函数集。
     /// </summary>
     /// <remarks>
     /// <code>

@@ -5,7 +5,7 @@
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.FairyGUI)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-UICanvas 拓展了 UIPanel 组件的功能，提供包资源的自动加载和依赖管理功能。
+拓展了 UIPanel 组件的功能，提供包资源的自动加载和依赖管理功能。
 
 ## 功能特性
 

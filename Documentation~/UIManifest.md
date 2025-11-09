@@ -5,7 +5,7 @@
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Unity.FairyGUI)
 [![Discord](https://img.shields.io/discord/1422114598835851286?label=Discord&logo=discord)](https://discord.gg/XMPx2wXSz3)
 
-UIManifest 实现了 FairyGUI 导出素材的清单管理功能，用于控制 UI 包资源及其依赖关系。
+实现了 FairyGUI 导出素材的清单管理功能，用于控制 UI 包资源及其依赖关系。
 
 ## 功能特性
 
