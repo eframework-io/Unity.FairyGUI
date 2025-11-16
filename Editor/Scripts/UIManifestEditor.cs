@@ -350,7 +350,7 @@ namespace EFramework.Unity.FairyGUI.Editor
                 XFile.DeleteFile(of);
             }
 
-            XFile.CopyDirectory(mani.RawPath, maniPath, ".meta");
+            XFile.CopyDirectory(Path.GetFullPath(mani.RawPath), maniPath, ".meta");
             AssetDatabase.Refresh();
             var nfiles = Directory.GetFiles(maniPath);
 
